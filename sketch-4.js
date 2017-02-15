@@ -1,19 +1,22 @@
-
 function setup() {
   createCanvas(400, 400);
 }
 
 function draw() {
+
+
   background(210);
-  ellipseMode(CENTER);
   colorMode(HSB);
   noStroke();
 
+  var h = 0
 
-  for (var posx = 0; posx <= 370; posx += 22) {
-    for (var posy = 20; posy <= 370; posy += 22) {
-      fill(posy + posx/100,260,100);
-      ellipse(20 + posx,20 + posy, 20, 20);
+  for (var y = 20; y <= 380; y += 20) {
+    for (var x = 20; x <= 380; x += 20) {
+      fill(h, 100, 100);
+      ellipse(x, y, 17, 17);
+
+      h = h + 0.6;
     }
   }
 }
